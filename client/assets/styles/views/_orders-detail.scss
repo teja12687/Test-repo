@@ -1,0 +1,125 @@
+.orders-detail {
+  sup {
+    color: $silver-chalice;
+  }
+  .tooltip {
+    .tooltip-inner {
+      padding: .85em;
+      min-width: 200px;
+      text-align: left;
+      font-size: 14px;
+      background: #fff;
+      color: #333;
+      -moz-box-shadow: 0px 0px 7px rgba(51, 51, 51, 0.73);
+      -webkit-box-shadow: 0px 0px 7px rgba(51, 51, 51, 0.73);
+      box-shadow: 0px 0px 7px rgba(51, 51, 51, 0.73);
+      font-family: "Helvetica Neue",Arial,sans-serif;
+    }
+  }
+  .tooltip.in {
+    opacity: 1;
+  }
+  .tooltip.right .tooltip-arrow {
+      top: 45%;
+      border-right-color: #fff;
+    }
+    .tooltip.left .tooltip-arrow {
+      top: 45%;
+      border-left-color: #fff;
+    }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .col-xs-4 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .card.callout {
+    margin-left: 0px;
+    margin-right: 0px;
+    .panel-card {
+      >.panel-heading {
+        h5 {
+          font-weight: normal;
+        }
+      }
+      >.panel-footer {
+        h4 {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  ol.breadcrumb {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+    li {
+      a {
+        color: $vz-dusty-gray;
+        font-family: "Helvetica Neue",Arial,sans-serif;
+      }
+      &.active > a {
+        color: $vz-dusty-gray;
+      }
+    }
+  }
+  .breadcrumb > li + li::before {
+    padding: 0px 3px;
+    color: $vz-dusty-gray;
+    font-family: "icons";
+    content: "\f101";
+    font-size: 25px;
+    vertical-align: top;
+    margin-top: -6px;
+    display: inline-block;
+  }
+
+  .order-id, .order-company, .order-time-title {
+    font-size: 25px;
+    color: $vz-dusty-gray;
+  }
+  .order-time-title {
+    color: $vz-blue;
+    .order-time-counter {
+      color: $vz-dusty-gray;
+    }
+  }
+
+  .scroll-content {
+    padding: 0 10px 0 0;
+    min-height: 545px;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .inner-scroll {
+    margin-right: -15px;
+  }
+  .panel {
+    .panel-heading {
+      //padding: 10px 15px 10px;
+      > span {
+        font-size: 17px;
+      }
+    }
+    .panel-body {
+      > .input-group {
+          margin-right: 10px;
+      }
+    }
+  }
+  .row.panel {
+    border: none;
+  }
+  .job-page-status {
+    margin-top: 5px;
+    display: block;
+    color: $vz-dusty-gray;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+  }
+}

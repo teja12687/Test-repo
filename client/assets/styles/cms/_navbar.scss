@@ -1,0 +1,141 @@
+
+//== header styles START =======================//
+.navbar.navbar-cms {
+  height: 100px;
+  max-height: 100px;
+  background: transparent linear-gradient(#353536, #313131);
+  .vertical-line {
+    span {
+      margin-top: 28px;
+      margin-left: 35px;
+      margin-right: 5px;
+      height: 50px;
+    }
+  }
+  .navbar-brand, 
+  .nav-pills, 
+  .profile-info  {
+    height: 100px;
+  }
+  .navbar-brand {
+    min-width: 150px;
+    span {
+      width: 167px;
+      height: 37px;
+      display: inline-block;
+      background: url('#{$image-path}/header/vz-logo-167.png');
+    }
+    a {
+      color: $white;
+    } 
+  }
+  .nav-pills {
+    li {
+      margin: 0 13px;
+      a {
+        padding: 2px 0px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        border-left: 1px solid transparent;
+        font-family: 'Apex';
+        span {
+          margin-left: 3px;
+          display: block;
+          font-size: 30px;
+          &.icon-assets {
+            margin-left: -20px;
+          }
+        }
+        label {
+            padding: 4px 17px;
+            font-weight: normal;
+            border-radius: 20px;
+            cursor: pointer;
+            > .small-icon {
+              margin-left: 5px;
+              font-size: 14px;
+              color: #666;
+              display: inline-block;
+            }
+          }
+      }
+      &:hover {
+        span { 
+          color: #ed1c24; 
+        }
+        label > span {
+          color: #666;
+        }
+      }
+      &.active {
+           cursor: default;
+        a {
+          cursor: default;
+          span {
+            color: #ed1c24;
+          }
+          label {
+            cursor: default;
+            background: #333;
+            box-shadow: 0px 0px 5px black inset;
+            > span {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+  .profile-info {
+    label {
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .profile-name {
+      margin-right: 15px;
+      color: $white;
+      font-size: 16px;
+      font-family: Arial;
+      label {
+        margin-right: 10px;
+      }
+    }
+    .icon-users {
+      color: #666;
+      font-size: 18px;
+      label {
+        margin-left: 5px;
+        color: $white;
+      }
+    }
+    button {
+      &.sign-out {
+        padding: 5px 12px 6px;
+        color: $white;
+        background-color: $vz-red;
+        border-radius: 2px;
+        font-size: 11px;
+        font-family: Arial;
+      }
+    }
+    .vertical-line {
+      span {
+        margin: 0 25px;
+        height: 25px;
+      }
+    }
+  }
+  .content-header {
+    height: 100px;
+    color: $white;
+    font-family: "Apex";
+    font-size: 30px;
+    .content-header-inner {
+      padding-top: 5px;
+      padding-left: 35px;
+      height: 100px;
+    }
+  }
+}
+//== header styles END =========================//

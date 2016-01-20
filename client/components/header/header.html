@@ -1,0 +1,2 @@
+<ng-include src="'components/header/header.private.html'" ng-if="HeaderCtrl.isLoggedIn()"></ng-include>
+<ng-include src="'components/header/header.public.html'" ng-if="!HeaderCtrl.isLoggedIn()"></ng-include>

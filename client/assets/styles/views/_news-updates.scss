@@ -1,0 +1,139 @@
+.news-updates {
+  &.page {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .panel {
+    border-color: transparent;
+  }
+  .panel-default {
+    border: none;
+  }
+  .header {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    h1 { 
+      margin-top: 0px;
+      font-size: 30px; 
+      color: $tundora;
+      font-weight: 600;
+    }
+  }
+  .subheader {
+    height: 80px;
+    background-color: $vz-white-lilac;
+    &.well {
+      margin-bottom: 0px;
+      padding: 0px 0px 0px 15px;
+      border-radius: 0px;
+    }
+    .well {
+      margin-top: 10px;
+      margin-bottom: 0px;
+      margin-left: 20px;
+      border: 0px;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    .vertical-line {
+      div {
+      }
+    }
+    
+    .profile-inner {
+      padding-top: 10px;
+    }
+    .icon-bell {
+      margin-right: 10px;
+      font-size: 35px;
+      color: #a6a8af;
+      display: inline-block;
+margin-top: 5px;
+vertical-align: top;
+    }
+    .subhead-name {
+      font-size: 24px;
+      color: $vz-dark-gray;
+      font-weight: 600;
+      text-transform: capitalize;
+      display: inline-block;
+margin-top: 12px;
+    }
+    .add-user {
+      font-size: 13px;
+      color: $vz-blue;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+    .input-group {
+      margin-top: 23px;
+      .form-control { font-size: 12px; color: $silver-chalice; }
+    }
+  }
+  .panel {
+    .table {
+      margin-bottom: 0px;
+      border-top: 0px;
+    }
+  }
+  .panel-body { 
+    padding: 0px 0 0; 
+  }
+  .view-more {
+    color: $vz-dark-gray;
+  }
+
+  .panel-default table > tbody {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    span:first-child {
+      color: $vz-dark-gray;
+      font-size: $font-size-16;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    span:nth-child(2) {
+      margin-top: 3px;
+      display: block;
+      color: $silver-chalice;
+      font-size: $font-size-13;
+    }
+    span.icon-profile {
+      font-size: $font-size-h2;
+      color: $vz-light-gray;
+    }
+     span {
+      label.time-stamp {
+        margin-left: 20px;
+        margin-bottom: 0px;
+        font-weight: normal;
+      }
+     } 
+    tr {
+      border-bottom: 1px solid $vz-light-gray;
+      td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: none;
+        &:first-child { 
+          width: 75%;
+          padding-left: 30px;
+        }
+        &:last-child { 
+          padding-right: 20px;
+          span {
+            margin-top: 10px;
+            margin-left: 20px;
+            color: $vz-light-gray;
+            font-size: 20px;
+            float: right;
+          } 
+        }
+      }
+    }
+  } 
+}

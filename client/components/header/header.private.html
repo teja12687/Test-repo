@@ -1,0 +1,76 @@
+
+
+<nav class="navbar navbar-cms" role="navigation">
+  <div class="container-fluid">
+
+    <div class="pull-left">
+      <div class="navbar-brand center-vertical">
+        <a href="/jobs">
+         <span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="vertical-line pull-left">
+      <span class="center-vertical"></span>
+    </div>
+
+    <div class="pull-left">
+      <ul class="nav nav-pills center-vertical">
+        <li role="presentation" ng-class="(HeaderCtrl.currState.current.name==='jobs' || HeaderCtrl.currState.current.name==='jobDetail') ?'active':''">
+          <a href="" ui-sref="jobs">
+            <span class="icon-jobs"></span>
+            <label>Jobs</label>
+          </a>
+        </li>
+                <li role="presentation" ng-class="HeaderCtrl.currState.current.name==='fallout'?'active':''">
+          <a href="" ui-sref="fallout">
+            <span class="icon-jobs"></span>
+            <label>Fallout Queue</label>
+          </a>
+        </li>
+        <li role="presentation" ng-class="(HeaderCtrl.currState.current.name==='contentProvider' || HeaderCtrl.currState.current.name==='cpDetails') ?'active':''">
+          <a href="" ui-sref="contentProvider">
+            <span class="icon-providers"></span>
+            <label>Providers</label>
+          </a>
+          </li>
+        <li role="presentation">
+          <a href="#">
+            <span class="icon-assets"></span>
+            <label>Assets
+             <span class="small-icon icon-arrow-link"></span>
+            </label>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pull-right">
+      <div class="nav-right profile-info center-vertical">
+        <a href="" ui-sref="users"><span class="icon-users">
+          <label>Users</label>
+        </span></a>
+
+        <span class="vertical-line">
+          <span class="center-vertical"></span>
+        </span>
+        <span class="profile-name"><label>Welcome, </label>{{ HeaderCtrl.getCurrentUser().firstName + " " + HeaderCtrl.getCurrentUser().lastName  }}
+        </span>
+        <button type="button" class="btn sign-out" ng-click="HeaderCtrl.logout()">Sign Out</button>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<script>
+  // $('li').click(function() {
+  //   $('li').removeClass('active');
+  //   $(this).addClass('active');
+  // })
+</script>
+
+
+
+

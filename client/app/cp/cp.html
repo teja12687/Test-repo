@@ -1,0 +1,86 @@
+<div class="content-providers">
+
+  <!-- Middle Content goes here -->
+  <div class="container-fluid">
+    <div class="page-header clearfix">
+      <div class="pull-left">
+        <h1 class="content-header">Content Providers</h1>
+      </div>
+      
+      <div class="pull-right">
+        <div class="cp-info center-vertical">
+          <a ng-click="Export()">
+              <span class="icon-export">
+              </span>
+              <label>Export</label>
+            </a>
+            <a href="" ui-sref="users">
+              <span class="icon-new-content-provider">
+              </span>
+              <label>New Content Provider</label>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 status-container">
+        <span class="pull-left text-center status-content active">
+          <h1 class="status-count">{{counts.active}}</h1>
+          <div class="status-info">
+            <span class="status-label"></span>
+            <span class="status-text">Active</span>
+          </div>
+        </span>
+
+        <span class="vertical-line pull-left">
+          <span class="center-vertical"></span>
+        </span>
+
+        <span class="pull-left text-center status-content onboarding">
+          <h1 class="status-count">{{counts.onboard}}</h1>
+          <div class="status-info">
+            <span class="status-label"></span>
+            <span class="status-text">Onboarding</span>
+          </div>
+        </span>
+
+        <span class="vertical-line pull-left">
+          <span class="center-vertical"></span>
+        </span>
+
+        <span class="pull-left text-center status-content inactive">
+          <h1 class="status-count">{{counts.inactive}}</h1>
+          <div class="status-info">
+            <span class="status-label"></span>
+            <span class="status-text">InActive</span>
+          </div>
+        </span>
+      </div>
+
+      <div class=" col-xs-4 col-sm-4 search-container">
+        <form class="text-center clearfix" role="search">
+          <div class="input-group">
+            <input class="form-control" placeholder="Search Providers" type="text" ng-model="searchText" >
+            <span class="input-group-addon" ng-click="search()">
+              <a href="" class="icon-search" ></a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <div angular-grid="gridOptions" class="ag-fresh" style="height: 100%"></div> 
+    </div>
+  </div>
+
+</div>
+
+<div id="overlay" ng-show="loading">
+  <span class="loading-indicator loading">
+    <div class="fa fa-spinner fa-pulse"></div>
+  </span>
+</div>
+
+

@@ -1,0 +1,487 @@
+//== content provider styles START =======================//
+.content-providers {
+  margin-bottom: 100px;
+  .page-header {
+    margin: 0 -15px;
+    padding: 1px 0px;
+    background-color: #f2f2f4;
+    border-bottom: 1px solid #ddd;
+    .content-header { 
+      margin-top: 15px;
+      margin-left: 15px; 
+      font-family: "Apex";
+      font-size: 30px;
+    }
+    .btn-back {
+      font-size: 40px;
+      color: rgb(153, 153, 153);
+      cursor: pointer;
+      &:hover {
+        color: #333;
+      }
+    }
+    .cp-info {
+      height: 63px;
+      width: inherit;
+      a {
+        margin-right: 25px;
+        display: inline-block;
+        > span {
+          margin-right: -5px;
+          color: $vz-red;
+          font-size: 20px;
+          &.icon-new-content-provider {
+            font-size: 24px;
+          }
+        }
+        > label {
+          margin-top: -10px;
+          margin-bottom: 0px;
+          vertical-align: middle;
+          color: #666;
+          font-family: "Apex";
+          font-weight: normal;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        &:hover {
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .status-container {
+    padding: 20px 0px;
+    .center-vertical {
+      width: 1px;
+      height: 80px;
+      border-left-color: #E6E6E6;
+      box-shadow: none;
+    }
+    .status-content {
+      padding: 0px 40px;
+      .status-count {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: #666;
+        font-size: 40px;
+        font-family: "Arial";
+        font-weight: bold;
+      }
+      .status-info {
+        .status-text {
+          margin-left: 5px;
+          margin-top: -6px;
+          font-size: 12px;
+          color: #666;
+          font-family: "Apex";
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .search-container {
+    padding: 35px 0px;
+    .input-group {
+      margin-right: 15px;
+    }
+    .form-control {
+      height: 50px;
+      font-size: 22px;
+      color: #999;
+      font-family: "Arial";
+      border-right: none;
+      box-shadow: none;
+      &:focus {
+        border-color: #ccc;
+      }
+    }
+    .input-group-addon {
+      background-color: transparent;
+      a.icon-search {
+        color: #ccc;
+        font-size: 30px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .pagination-container {
+    width: 435px;
+    height: 40px;
+    float: right;
+  }
+  .pagination-content {
+    height: 60px;
+    .pagination-dropdown {
+      margin-top: 4px;
+      position: absolute;
+      z-index: 2;
+      .btn-group {
+        .btn-cms {
+          padding-bottom: 3px;
+          padding-top: 3px;
+          height: 30px;
+          color: #999;
+          background-color: #f5f5f5;
+          &.disabled {
+            font-size: 12.5px;
+            opacity: 1;
+          }
+          &:hover {
+            border-color: #ccc;
+            cursor: default;
+          }
+          &.dropdown-toggle {
+            width: 53px;
+          }
+        }
+        .btn-label-cms {
+          margin-right: -8px;
+          color: #333;
+        }
+        .dropdown-toggle:hover {
+          cursor: pointer;
+        }
+      }
+      .open > .dropdown-menu {
+        margin-top: 0px;
+        padding: 0px;
+        min-width: 55px;
+        left: 51px;
+        > li > a {
+          padding: 3px 12px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .row.mt20 {
+    margin-top: 20px;
+  }
+}
+
+#overlay { 
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0.9;
+  filter: alpha(opacity=80);
+  z-index: 9;
+  .loading-indicator {
+    color: #333;
+    position: absolute;
+    &.loading {
+      top: 25%;
+      left: 50%;
+    }
+    .fa-spinner {
+      vertical-align: bottom;
+      font-size: 3em;
+    }
+    .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(10);
+      -moz-animation: fa-spin 1s infinite steps(10);
+      animation: fa-spin 1s infinite steps(10); 
+    }
+  } 
+}
+
+//-- dynamic table styles =======================//
+.ag-fresh {
+  .ag-root {
+    width: 100%;
+    border: none;
+  }
+  #centerRow {
+    height: 500px !important;
+    border: 1px solid #ddd;
+  }
+  .ag-header {
+    height: 45px !important;
+  }
+  .ag-header-container {
+    height: auto !important;
+    left:0px;
+    margin-right: 15px;
+    padding-left: 0px;
+    border: 0px;
+  }
+  .ag-header-cell {
+    padding: 8px;
+    border-right-color: #ddd;
+  }
+  .ag-header-viewport {
+    width: 100%;
+    /*overflow: auto;*/
+    -webkit-background: transparent linear-gradient(#FFF, #D3D3D3) repeat scroll 0% 0%;
+    -moz-background: transparent linear-gradient(#FFF, #D3D3D3) repeat scroll 0% 0%;
+    background: transparent linear-gradient(#FFF, #D3D3D3) repeat scroll 0% 0%;
+  }
+  .ag-body {
+    padding-top: 44px !important;
+  }
+  .ag-body-viewport {
+    overflow-x: hidden;
+  }
+  .ag-body-container {
+    width: 100%;
+  }
+  #borderLayout_eGridPanel {
+    overflow: hidden !important;
+  }
+  .ag-header-cell:last-child {
+    border-right: 0px;
+  }
+  .ag-row-even {
+      background-color: #EEF1F9;
+  }
+  .ag-row-odd {
+      background-color: #FFF;
+  }
+  .ag-row {
+    .ag-cell {
+      padding: 4px;
+    }
+    .ag-cell:first-child {
+      text-align: center;
+    }
+  }
+  .orders .row.panel .btn {
+    background: #fff;
+  }
+}
+
+.fallout-fresh {
+  .ag-header {
+    height: 90px !important;
+  }
+  .ag-header-group {
+    /*width: 48%;*/
+  }
+  .ag-header-group-cell {
+    padding: 8px;
+    border-color: #CCC;
+    border-right: 1px solid #CCC;
+    cursor: pointer;
+  }
+  .ag-header-cell-grouped {
+    /*width: 25% !important;*/
+  }
+  .ag-header-cell:last-child {
+    border-right: 1px solid #CCC;
+  }
+  .ag-header-group-cell-label {
+    color: #333;
+    font-weight: bold;
+    font-family: "Arial";
+  }
+  .ag-body {
+    padding-top: 90px !important;
+  }
+}
+
+//== fallout styles  =======================//
+
+
+
+//== login styles  =======================//
+.login {
+  min-height: 100%;
+  height: auto;
+  z-index: 0;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  display: block;
+  background: url("../assets/images/login/background-image.png") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .form-control-feedback {
+    margin-top: 18px;
+  }
+  .login-wrapper {
+    margin-top: 120px;
+    margin-left: -250px;
+    width: 500px;
+    position: relative;
+    left: 50%;
+  }
+  .login-container {
+    padding: 0px 30px 3px 30px;
+    background: rgba(255, 255, 255, 0.9) none repeat scroll 0% 0%;
+  }
+  .form-header {
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-family: "Apex";
+    color: #d33;
+  }
+  .form-group {
+    .form-control {
+      margin-bottom: 20px;
+      height: 45px;
+      font-size: 19px;
+      color: #999;
+      font-family: "Apex";
+      border-radius: 2px;
+    }
+  }
+  .btn-block {
+    height: 50px;
+    font-size: 21px;
+    font-family: "Apex";
+    border-radius: 2px;
+  }
+  .btn-danger {
+    background-color: $vz-red;
+  }
+  .forgot-link {
+    /*margin-top: 10px;*/
+    a {
+      font-family: "Apex";
+      font-size: 18px;
+      color: #6e6e6e;
+    }
+  }
+  .error-wrapper {
+    height: 50px;
+    .error-container {
+      height: 50px;
+      background-color: #cc9900;
+      .error-message {
+        padding-top: 12px;
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        font-family: "Apex";
+      }
+    }
+  }
+  .remember-box {
+    height: 60px;
+   > span {
+      margin-top: 6px;
+      margin-left: 15px;
+      vertical-align: top;
+      display: inline-block;
+      color: #6e6e6e;
+      font-family: "Apex";
+      font-size: 18px;
+      font-weight: 100;
+    }
+   #foo:checked::before,
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      clip: rect(0 0 0 0);
+    }
+    #foo:checked,
+    input[type="checkbox"] + label:before {
+      content: url('../assets/images/login/uncheck.png');
+      cursor: pointer;
+    }
+    input[type="checkbox"]:checked + label:before {
+      content: url('../assets/images/login/check.png');
+      cursor: pointer;
+    }
+  }
+  .loading-indicator {
+    width: 3%;
+    left: 50%;
+    color: #808080;
+    position: relative;
+    padding: 0px;
+    margin: 0px 10px 0px -27px;
+    color: #FFF;
+    left: -10px;
+    display: inline-block;
+    .fa-spinner {
+      vertical-align: bottom;
+      font-size: 1.3em;
+    }
+    .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(10);
+      -moz-animation: fa-spin 1s infinite steps(10);
+      animation: fa-spin 1s infinite steps(10); 
+    }
+  }
+}
+
+
+//== for status inside grids  =======================//
+.status-failed {
+  margin-top: 5px;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #F00;
+  display: inline-block;
+}
+.status-running {
+  @extend .status-label-default;
+  background-color: #3399ff;
+}
+.status-active {
+  @extend .status-label-default;
+  background-color: #339933;
+}
+.status-onboarding {
+  @extend .status-label-default;
+  background-color: #ff6633;
+}
+.status-inactive {
+  @extend .status-label-default;
+  background-color: #999;
+}
+
+
+//== for status container area  =======================//
+.status-content {
+  &.failed {
+    >.status-info >.status-label {
+      margin-top: 5px;
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 15px solid #F00;
+      display: inline-block;
+    }
+  }
+  &.running {
+    >.status-info >.status-label {
+      @extend .status-label-default;
+      background-color: #3399ff;
+    }
+  }
+  &.active {
+    >.status-info >.status-label {
+      @extend .status-label-default;
+      background-color: #339933;
+    }
+  }
+  &.onboarding {
+    >.status-info >.status-label {
+      @extend .status-label-default;
+      background-color: #ff6633;
+    }
+  }
+  &.inactive {
+    >.status-info >.status-label {
+      @extend .status-label-default;
+      background-color: #999;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* Custom Fonts */
+@font-face { font-family: 'vzFont';
+  src: url("../../assets/fonts/VerizonApex-Medium.otf");
+  src: local('VerizonApex-Medium'), url("../../assets/fonts/VerizonApex-Medium.otf");
+}
+@font-face { font-family: 'vzFontLight';
+  src: url("../../assets/fonts/VerizonApex-Light.otf");
+  src: local('VerizonApex-Light'), url("../../assets/fonts/VerizonApex-Light.otf");
+}
+@font-face { font-family: 'vzFontBook';
+  src: url("../../assets/fonts/VerizonApex-Book.otf");
+  src: local('VerizonApex-Book'), url("../../assets/fonts/VerizonApex-Book.otf");
+}
+@font-face {
+	font-family: "Apex";
+	font-style:normal;
+	font-weight:400;
+	src:url(../../assets/fonts/apex-book-webfont.eot);
+	src:url(../../assets/fonts/apex-book-webfont.eot?#iefix) format("embedded-opentype"),
+  url(../../assets/fonts/apex-book-webfont.woff) format("woff"),
+  url(../../assets/fonts/apex-book-webfont.ttf) format("truetype"),
+  url(../../assets/fonts/apex-book-webfont.svg#Apex-Book) format("svg")
+}
+
+$font-family-vz:          "Apex", Arial, sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-140:           ceil(($font-size-base * 10)) !default; // ~140px
+$font-size-60:            ceil(($font-size-base * 4.28)) !default; // ~60px
+$font-size-40:            floor(($font-size-base * 2.9)) !default; // ~40px
+$font-size-36:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-30:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-26:            ceil(($font-size-base * 1.8)) !default; // ~26px
+$font-size-24:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-23:         		ceil(($font-size-base * 1.6)) !default; // ~23px
+$font-size-22:         		ceil(($font-size-base * 1.55)) !default; // ~22px
+$font-size-21:            ceil(($font-size-base * 1.45)) !default; // ~21px
+$font-size-20:        	  ceil(($font-size-base * 1.40)) !default; // ~20px
+$font-size-19:            ceil(($font-size-base * 1.30)) !default; // ~19px
+$font-size-18:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-17:            ceil(($font-size-base * 1.2)) !default; // ~17px
+$font-size-16:            ceil(($font-size-base * 1.1)) !default; // ~16px
+$font-size-13:        	  ceil(($font-size-base * 0.9)) !default; // ~13px
+$font-size-14:            ceil(($font-size-base * 1.0)) !default; // ~14px
+$font-size-12:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            $font-size-36;
+$font-size-h2:            $font-size-30;
+$font-size-h3:            $font-size-24;
+$font-size-h4:            $font-size-18;
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            $font-size-12;
+
+$font-size-large:         $font-size-21;
+$font-size-medium:        $font-size-18;
+$font-size-small:         $font-size-12;

@@ -1,0 +1,204 @@
+<style>
+.highlightedText {
+    background: yellow;
+}
+</style>
+<div class="content-providers">
+
+   
+  <!-- Middle Content goes here -->
+  <div class="container-fluid">
+    
+    <div class="page-header clearfix">
+      <div class="col-lg-12">
+        <div class="pull-left col-xs-4">
+          <h3>
+            <a ui-sref="jobs" class="fa fa-arrow-circle-left btn-back"></a>
+          </h3>
+        </div>
+        <div class="pull-leftX col-xs-4 text-center">
+          <h3><span class="status-"+{{provider.Status}}></span> {{JobCtrl.orderid}}</h3>
+           {{JobCtrl.job.providerName}}       
+        </div>
+      </div>
+    </div>
+    
+    <!--<div class="page-header-title">
+      <h1>Orders</h1>
+    </div>-->
+
+    <!--<hr>
+
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/jobs">order list</a></li>
+        <li class="active"><a href="#">order detail</a></li>
+      </ol>
+    </div>-->
+
+    <!--<div class="row panel">
+      <div class="col-xs-5">
+        <span class="order-id">
+          Order ID: <span>{{JobCtrl.orderid}}</span>
+        </span>
+      </div>
+
+      <div class="col-xs-3">
+        <span class="order-company pull-right">{{JobCtrl.job.providerName}}<a href="javascript:void(0)" tooltip-placement="right" tooltip-trigger="click" tooltip="Provider ID:{{JobCtrl.job.providerId}}"><sup class="icon-help"></sup></a></span>
+      </div>
+
+      <div class="col-xs-4">
+        <span class="order-time-title pull-right capitalize">{{JobCtrl.job.orderStatusCode}}:
+          <span class="order-time-counter">
+            <span ng-if="JobCtrl.job.orderStatusCode!='running'">{{JobCtrl.job.runtime}}</span>
+            <timelapse ng-if="JobCtrl.job.orderStatusCode=='running'" start="JobCtrl.job.orderStart"/>
+          </span>
+          <a tooltip-placement="bottom" tooltip-trigger="click" tooltip-html-unsafe="{{JobCtrl.toolTipOrderTimes}}"><sup class="icon-help"></sup></a>
+      </span>
+      </div>
+    </div>-->
+
+    <div class="row mt20">
+      <div class="col-xs-8">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading capitalize">
+            <span>{{JobCtrl.job.workFlowName }} <a href="javascript:void(0)" tooltip-placement="right" tooltip-trigger="click" tooltip="Workflow ID: {{JobCtrl.job.workflowId}}"><sup class="icon-help"></sup></a></span>
+          </div>
+          <div class="panel-body">
+            <div class="input-group">
+              <input class="form-control" placeholder="Search Work Units" ng-model="JobCtrl.taskSearchText" type="text">
+              <span class="input-group-addon"><span class="icon-search"></span></span>
+            </div>
+
+            <div class="scroll-content">
+
+              <div class="card callout"  ng-class="{'success': task.taskStatusCode == 'completed' , 'info': task.taskStatusCode == 'running' }" ng-repeat="task in JobCtrl.job.tasks | filter:JobCtrl.taskSearchText"  > 
+                  
+                <div class="callout-body">
+                  <div class="panel panel-card" >
+                    <div class="panel-heading nobg" style="background-color: rgba(235, 239, 239, 0.4)">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-12 col-xs-12" >
+                          <h4><span ng-bind-html="highlight(task.taskName,JobCtrl.taskSearchText)"></span><a href="javascript:void(0)" tooltip-placement="right" tooltip-trigger="click" tooltip="{{task.taskStatusDesc}}"><sup class="icon-help"></sup></a></h4>
+                        </div>
+                          
+                        <div style="border: 1px solid #d4d4d4; height:100px; left:50.5%; position:absolute"> </div>                        
+                            
+                                <div class="col-md-3 col-sm-6 col-xs-6 pull-right">
+                                    <h5><strong class="label label-default">End:&nbsp;&nbsp;</strong> {{task.taskEnd | date:'yyyy-MM-dd HH:mm:ss'}} UTC</h5>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-6 pull-right">
+                                    <h5><strong>Start:&nbsp;&nbsp;</strong> {{task.taskStart | date:'yyyy-MM-dd HH:mm:ss'}} UTC</h5>
+                                </div>
+                           
+                      </div>
+                    </div>
+                    <div class="panel-body nopadding" style="background-color: rgba(235, 239, 239, 0.4)">
+                      <div class="collapse-trigger collapsed" data-toggle="collapse" data-target="#initialization{{$index}}">
+                        <button class="btn btn-default btn-xs icon-chevron-down show-when-open"><span>Hide Details</span> </button>
+                        <button class="btn btn-info btn-xs icon-chevron-right show-when-collapsed"><span>Show Details</span></button>
+                      </div>
+                      <div class="collapse collapse-content" id="initialization{{$index}}">
+                        <table class="table table-striped">
+                          <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="att in task.taskAttributes">
+                              <td>{{att.name}}</td>
+                              <td>{{att.value}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="panel-footer" style="background-color: rgba(235, 239, 239, 0.4)">
+                      <h4>Status:&nbsp;&nbsp;<span class="card-color capitalize">{{task.taskStatusCode | uppercase}}</span></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-4">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading capitalize">
+            <span>File Info</span>
+            <div class="pull-right">
+              <!--<a href="#">Raw Data</a>-->
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="input-group">
+              <input class="form-control" placeholder="Search Work Units" type="text" ng-model="JobCtrl.fileSearchText">
+              <span class="input-group-addon"><span class="icon-search"></span></span>
+            </div>
+
+            <br />
+
+            <div class="scroll-content">
+
+              <div class="panel panel-card" ng-repeat="file in JobCtrl.job.files | filter:JobCtrl.fileSearchText" >
+                <div class="panel-heading">
+                  {{file.fileType}} 
+                </div>
+                <button type="button" ng-click ="readfile()">Read</button>
+                <div>{{fileData}}</div>
+                <div class="panel-body">
+                  <p><strong>{{file.fileName}}</strong></p>
+                  <div class="collapse-trigger collapsed" data-toggle="collapse" data-target="#content{{$index}}">
+                    <i class="icon-chevron-down show-when-open"><span>Hide Details</span></i>
+                    <i class="icon-chevron-right show-when-collapsed"><span>Show Details</span></i>
+                  </div>
+                  <div class="collapse collapse-content" id="content{{$index}}">
+                    <table class="table table-striped">
+                      <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr ng-repeat="att in file.fileAttributes">
+                        <td>{{att.name}}</td>
+                        <td>{{att.value}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="panel-footer clearfix">
+                  <div class="pull-left">
+                    {{file.fileSize}} KB
+                  </div>
+                  <div class="pull-right">
+                    {{file.orderid}}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xs-12">
+              <span class="job-page-status">&nbsp;</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+

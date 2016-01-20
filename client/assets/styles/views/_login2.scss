@@ -1,0 +1,167 @@
+/* variables */
+$grey-3:             #333;
+$red-dark:           #dd3333;
+$grey-9:             #999;
+$orange-dark:        #cc9900;
+
+.login2 {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  .well {
+    margin: 0px;
+  }
+  .wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    margin: 0px auto -50px;
+  }
+  header {
+    padding: 16px 30px 17px;
+    background: $white;
+  }
+  .vz-logo-header {
+    width: 620px;
+    height: 62px;
+    display: inline-block;
+    background: url('/images/login/vz-logo_360.png') no-repeat;
+  }
+  .header-text {
+    color: $grey-3;
+    font-size: 36px;
+    text-transform: capitalize;
+    float: right;
+    margin-top: 20px;
+  }
+  .form-wrapper {
+    margin: 0px auto 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 500px;
+    min-height: 370px;
+    background: $white;
+    h2 {
+      margin: 0px;
+      font-size: 42px;
+      color: $red-dark;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+  form {
+    padding: 20px 60px;
+    width: inherit;
+    display: inline-block;
+    .btn {
+      margin-top: 30px;
+      padding: 9px 12px;
+      border-radius: 0px;
+      font-size: 21px;
+      color: $white;
+      background-color: $red-dark;
+    }
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 0px;
+    font-size: 18px;
+    color: $grey-9;
+    &.error {
+      border-color: $vz-red;
+    }
+  }
+  
+  ::-webkit-input-placeholder {
+   color: $grey-9;
+   font-size: 18px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+   color: $grey-9; 
+   font-size: 18px;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+   color: $grey-9; 
+   font-size: 18px; 
+  }
+  :-ms-input-placeholder {  
+   color: $grey-9; 
+   font-size: 18px; 
+  }
+
+  .error-spacer {
+    margin: 45px auto 0;
+    width: 500px;
+    height: 50px;
+  }
+  .error-message {
+    padding-top: 13px;
+    height: inherit;
+    color: $white;
+    background: $orange-dark;
+    font-size: 18px;
+    display: none;
+  }
+  .checkbox {
+    display: none;
+    color: $grey-9;
+    text-align: left;
+    span {
+      margin-top: -15px;
+      margin-right: 10px;
+      font-size: 35px;
+      display: inline-block;
+      vertical-align: text-top;
+    }
+    label {
+      padding-top: 10px;
+      padding-left: 0px;
+      font-size: 18px;
+    }
+  }
+  .forgot-link {
+    display: none;
+    margin-top: 20px;
+    a {
+      color: $grey-9;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  }
+  .login-image-bkgrnd {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    display: block;
+    background: url("../images/login/login-image-bkgrnd.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .footer, .push {
+    height: 50px;
+  }
+  .footer {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    background: $white;
+  }
+  .footer-info {
+    padding-top: 10px;
+    span.copyright {
+      color: $grey-9;
+      font-size: 11px;
+      span {
+        font-size: 19px;
+      }
+    }
+  }
+}

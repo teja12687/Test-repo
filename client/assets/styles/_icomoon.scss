@@ -1,0 +1,52 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../assets/fonts/icomoon.eot?-s2pk2o');
+	src:url('../assets/fonts/icomoon.eot?#iefix-s2pk2o') format('embedded-opentype'),
+  		url('../assets/fonts/icomoon.ttf?-s2pk2o') format('truetype'),
+  		url('../assets/fonts/icomoon.woff?-s2pk2o') format('woff'),
+  		url('../assets/fonts/icomoon.svg?-s2pk2o#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+	content: "\e608";
+}
+.icon-search:before {
+	content: "\e607";
+}
+.icon-export:before {
+	content: "\e605";
+}
+.icon-new-content-provider:before {
+	content: "\e606";
+}
+.icon-arrow-link:before {
+	content: "\e600";
+}
+.icon-assets:before {
+	content: "\e601";
+}
+.icon-jobs:before {
+	content: "\e602";
+}
+.icon-providers:before {
+	content: "\e603";
+}
+.icon-users:before {
+	content: "\e604";
+}

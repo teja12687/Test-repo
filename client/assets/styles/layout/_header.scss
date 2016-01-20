@@ -1,0 +1,162 @@
+
+// Navbar =====================================================================
+.navbar.navbar-cms {
+  height: 100px;
+  max-height: 100px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background: transparent linear-gradient(#353536, #313131);
+  &.public {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
+    .vertical-line {
+      span {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+  .navbar-container {
+    max-width: 1250px;
+  }
+  .vertical-line {
+    span {
+      margin-top: 28px;
+      margin-left: 35px;
+      margin-right: 5px;
+      height: 50px;
+    }
+  }
+  .content-header {
+    height: 100px;
+    color: $white;
+    font-family: "Apex";
+    font-size: 30px;
+    .content-header-inner {
+      padding-top: 5px;
+      padding-left: 35px;
+      height: 100px;
+    }
+  }
+  .navbar-brand, 
+  .nav-pills, 
+  .profile-info  {
+    height: 100px;
+  }
+  .navbar-brand {
+    padding: 5px;
+    min-width: 150px;
+    float: none;
+    span {
+      width: 167px;
+      height: 37px;
+      display: inline-block;
+      background: url('../assets/images/header/vz-logo-167.png');
+    }
+    a {
+      color: $white;
+    } 
+  }
+  .nav-pills {
+    li {
+      margin: 5px 5px 0;
+      a {
+        padding: 2px 0px;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        border-left: 1px solid transparent;
+        font-family: 'Apex';
+        span {
+          margin-left: 3px;
+          display: block;
+          font-size: 29px;
+          &.icon-assets {
+            margin-left: -10px;
+          }
+        }
+        label {
+            margin-top: 5px;
+            padding: 7px 30px 4px;
+            font-weight: normal;
+            line-height: 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            > .small-icon {
+              margin-left: 5px;
+              font-size: 14px;
+              color: #666;
+              display: inline-block;
+            }
+          }
+          &:hover, &:focus { background-color: transparent; }
+      }
+      &:hover {
+        span { 
+          color: $vz-red; 
+        }
+        label > span {
+          color: #666;
+        }
+      }
+      &.active {
+           cursor: default;
+        a {
+          cursor: default;
+          background-color: transparent;
+          span {
+            color: $vz-red;
+          }
+          label {
+            cursor: default;
+            background: #4b4b4b;
+            //box-shadow: 0px 2px 2px black inset;
+            box-shadow: 0px 2px 2px #000 inset, 0px 2px 2px rgba(243, 243, 243, 0.25);
+            > span {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+  .profile-info {
+    label {
+      margin-left: 5px;
+      color: $white;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .profile-name {
+      margin-right: 15px;
+      color: $white;
+      font-size: 16px;
+      font-family: Arial;
+      label {
+        margin-right: 10px;
+      }
+    }
+    .icon-users {
+      color: #666;
+      font-size: 18px;
+    }
+    button {
+      &.sign-out {
+        padding: 5px 12px 6px;
+        color: $white;
+        background-color: $vz-red;
+        border-radius: 2px;
+        font-size: 11px;
+        font-family: Arial;
+      }
+    }
+    .vertical-line {
+      span {
+        margin: 0 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+

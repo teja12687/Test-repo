@@ -1,0 +1,132 @@
+//== global styles START =======================//
+$white:                 #ffffff;
+$vz-red:                #ED1C24; 
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html, 
+body {
+  height: 100%;
+  font-family: "Arial";
+}
+body {
+  min-width: 1250px;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0px auto -100px;
+}
+.push, 
+.footer {
+  height: 100px;
+}
+
+.center-vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+hr {
+  margin-top: 0px;
+}
+
+*:focus {
+    outline: none;
+}
+
+li, a, .active, a:hover, a:focus, textarea:focus, input:focus, input 
+{ outline: none; outline: 0; text-decoration: none; }
+
+.vertical-line {
+  span {
+    width: 2px;
+    display: inline-block;
+    border-left: 1px solid #2A2929;
+    box-shadow: -1px 0px 0px #444;
+  }
+}
+
+.status-label-default {
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #ddd;
+  border-radius: 50px;
+}
+
+
+// //for status inside grids //
+// .status-failed {
+//   margin-top: 5px;
+//   width: 0; 
+//   height: 0; 
+//   border-left: 10px solid transparent;
+//   border-right: 10px solid transparent;
+//   border-bottom: 15px solid #F00;
+//   display: inline-block;
+// }
+// .status-running {
+//   @extend .status-label-default;
+//   background-color: #3399ff;
+// }
+// .status-active {
+//   @extend .status-label-default;
+//   background-color: #339933;
+// }
+// .status-onboarding {
+//   @extend .status-label-default;
+//   background-color: #ff6633;
+// }
+// .status-inactive {
+//   @extend .status-label-default;
+//   background-color: #999;
+// }
+
+// // for status container area //
+// .status-content {
+//   &.failed {
+//     >.status-info >.status-label {
+//       margin-top: 5px;
+//       width: 0; 
+//       height: 0; 
+//       border-left: 10px solid transparent;
+//       border-right: 10px solid transparent;
+//       border-bottom: 15px solid #F00;
+//       display: inline-block;
+//     }
+//   }
+//   &.running {
+//     >.status-info >.status-label {
+//       @extend .status-label-default;
+//       background-color: #3399ff;
+//     }
+//   }
+//   &.active {
+//     >.status-info >.status-label {
+//       @extend .status-label-default;
+//       background-color: #339933;
+//     }
+//   }
+//   &.onboarding {
+//     >.status-info >.status-label {
+//       @extend .status-label-default;
+//       background-color: #ff6633;
+//     }
+//   }
+//   &.inactive {
+//     >.status-info >.status-label {
+//       @extend .status-label-default;
+//       background-color: #999;
+//     }
+//   }
+// }
+
+
+//== global styles END =========================//

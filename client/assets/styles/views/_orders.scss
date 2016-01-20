@@ -1,0 +1,126 @@
+.orders {
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .panel {
+    .panel-heading {
+      //padding: 10px 15px 10px;
+      > span {
+        font-size: 17px;
+      }
+      .btn-group {
+        margin-top: -2px;
+        .btn-default {
+          color: $white;
+          background-color: $silver-chalice;
+          border-color: $vz-dusty-gray;
+          > span {
+            font-size: 19px;
+          }
+          &.dropdown-toggle {
+            //padding: 2px 4px 1px;
+            padding: 0px 4px 1px;
+          }
+            @media screen and (-webkit-min-device-pixel-ratio:0) { 
+              /* Safari and Chrome */
+              &.dropdown-toggle {
+                //padding: 2px 4px 2px;
+                padding: 0px 4px 1px;
+              } 
+            /* Safari only override */
+            ::i-block-chrome,.flex-direction-nav-featured a {
+              margin-top: 5%;
+            } 
+          }
+        } 
+        .btn {
+          margin-top: 0px;
+          padding: 4px 12px;
+        }
+      }
+      .items-text {
+        margin: 0 0 0 15px;
+        font-size: 12px;
+        font-family: "Helvetica Neue",Arial,sans-serif;
+      }
+    }
+  }
+  .row.panel {
+    .label-contents {
+      margin-top: -5px;
+      padding-bottom: 0px;
+      .vertical-line {
+        width: 30px;
+        display: inline-block;
+        padding-left: 15px;
+        > span {
+          width: 1px;
+          background: $silver-chalice;
+          height: 55px;
+          display: inline-block;
+          margin: 0px auto;
+        }
+      }
+      .label-outer {
+        .label {
+          padding: 0.2em 0.8em;
+          min-width: 65px;
+          display: inline-block;
+          border-radius: 8px;
+          font-size: 24px;
+          font-weight: 500;
+          background: $vz-light-gray;
+          &.danger {
+            color: $vz-red;
+          }
+          &.dark {
+            color: $vz-dark-gray;
+          }
+        }
+        > .label-text {
+          margin-top: 2px;
+          display: block;
+          font-size: 16px;
+          color: $silver-chalice;
+          text-transform: capitalize;
+        }
+      }
+    }
+    border: none;
+    .btn {
+      min-width: 95px;
+      background: $vz-dark-gray;
+      border-color: $vz-dusty-gray ;
+      &:hover { background: $silver-chalice; }
+    }
+  }
+  .input-group, .btn {
+    margin-top: 13px;
+  }
+  .job-page-status {
+    margin-top: 5px;
+    display: block;
+    color: $vz-dusty-gray;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+  }
+  .pagination {
+    margin: 0px;
+    ont-family: "Helvetica Neue",Arial,sans-serif;
+    li {
+      a {
+        color: $vz-dusty-gray;
+      }
+    }
+     > .active > a, 
+     > .active > span, 
+     > .active > a:hover, 
+     > .active > span:hover, 
+     > .active > a:focus, 
+     > .active > span:focus {
+      color: $white;
+      background-color: $vz-dusty-gray;
+      border-color: $vz-dusty-gray;
+    }
+  }
+  
+}

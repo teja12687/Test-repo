@@ -1,0 +1,133 @@
+<div class="content-providers">
+
+  <!-- Middle Content goes here -->
+  <div class="container-fluid">
+    <div class="page-header clearfix">
+      <div class="col-lg-12">
+        <div class="pull-left col-xs-4">
+          <h3>
+            <a ui-sref="contentProvider" class="fa fa-arrow-circle-left btn-back"></a>
+          </h3>
+        </div>
+        <div class="pull-leftX col-xs-4 text-center">
+          <h3><span class="status-{{provider.Status}}"></span> {{provider.Id}}</h3>
+           {{provider.Name}}        
+        </div>
+        <div class="pull-right col-xs-4">
+          <div class="cp-info center-vertical text-right">
+            <div>Last Updated : {{provider.UpdatedDate}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="row">
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Content Group</label>
+        <input type="text" name="contentGroup" ng-model="provider.ContentGroupName" placeholder="content group" class="form-control" required>
+      </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Content Type</label>
+        <input type="text" name="contentType" ng-model="provider.ContentType" placeholder="content type" class="form-control" required>
+      </div>
+     </div>
+   </div>
+   
+    <div class="row">
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Landing Pad</label>
+        <input type="text" name="contentGroup" ng-model="provider.LandingPad" placeholder="landing pad" class="form-control" required>
+      </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Product Type</label>
+        <input type="text" name="productType" ng-model="provider.ProductType" placeholder="content type" class="form-control" required>
+      </div>
+     </div>
+   </div>
+   
+    <div class="row">
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Storefront</label>
+        <input type="text" name="contentGroup" ng-model="provider.Storefront" placeholder="store front" class="form-control" required>
+      </div>
+     </div>
+     <div class="col-lg-6">
+       <div class="form-group">
+        <label>Target Platform</label>
+        <!--<input type="text" name="contentType" placeholder="target platform" class="form-control" required>-->
+        <table class="table">
+        <tbody>
+          <tr>
+            <td>VOD:</td>
+            <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.VOD)"> SD
+                  </label>
+             </td>
+             <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.VOD_HD)"> HD
+                  </label>
+             </td>     
+          </tr>
+           <tr>
+            <td>HLS:</td>
+            <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.HLS_SM)"> SD
+                  </label>
+             </td>
+             <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.HLS_SM_HD)"> HD
+                  </label>
+             </td>  
+          </tr>
+           <tr>
+            <td>Smooth Streaming:</td>
+            <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.SMOOTH)"> SD
+                  </label>
+             </td>
+             <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.SMOOTH_HD)"> HD
+                  </label>
+             </td>  
+          </tr>
+           <tr>
+            <td>MP4:</td>
+            <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.MP3)"> SD
+                  </label>
+             </td>
+             <td><label class="checkbox-inline">
+                    <input type="checkbox" ng-checked="getValue(provider.AdditionalDetails.TargetPlatforms.MP3_HD)"> HD
+                  </label>
+             </td>  
+          </tr>
+        </tbody>
+      </table>
+      </div>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col-lg-12">
+     <h3 class="content-header">Additional Details</h3>
+     <table class="table table-striped">
+        <tbody>
+          <tr ng-repeat="att in provider.details">
+            <td>{{att.name}}</td>
+            <td>{{att.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+   </div>
+   
+      </div> 
+   
+  </div>

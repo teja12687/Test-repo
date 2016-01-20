@@ -1,0 +1,51 @@
+$font-path: "/assets/fonts";
+$image-path: "/assets/images";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"; 
+@import "../bower_components/font-awesome/scss/font-awesome"; 
+
+
+@import '../assets/styles/bourbon/bourbon';
+@import '../assets/styles/bootstrap/mixins';
+@import '../assets/styles/global/mixins';
+@import '../assets/styles/global/var';
+
+@include font-face('Apex', #{$font-path}/apex-book-webfont, 400, normal);
+@include font-face('Apex-Medium', #{$font-path}/apex-medium-webfont, 500, normal);
+@include font-face('Apex-Bold', #{$font-path}/apex-bold-webfont, 700, normal);
+@include font-face('VerizonApex-BookItalic', #{$font-path}/VerizonApex-BookItalic, 400, italic);
+@include font-face('VerizonApex-MediumItalic', #{$font-path}/VerizonApex-MediumItalic, 500, italic);
+@include font-face('VerizonApex-BoldItalic', #{$font-path}/VerizonApex-BoldItalic, 700, italic);
+@include font-face('Glyphicons Halflings', #{$font-path}/glyphicons-halflings-regular);
+
+
+@import 
+	"../assets/styles/layout/header",
+	"../assets/styles/layout/sidebar",
+	"../assets/styles/layout/footer"
+;
+
+/**
+ * App-wide Styles
+ */
+
+
+// Component styles are injected through grunt
+// injector
+@import 'cp/cp.scss';
+@import 'login/login.scss';
+@import 'users/users.scss';
+// endinjector
+
+
+//CMS bootstrap theme - sass files
+@import 
+  "../assets/styles/cms/global",
+  "../assets/styles/cms/custom",
+  "../assets/styles/cms/grid",
+  "../assets/styles/icomoon",
+  "../assets/styles/cms/patternlibrary";
+;
+
+

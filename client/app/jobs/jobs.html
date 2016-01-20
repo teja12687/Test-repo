@@ -1,0 +1,165 @@
+<div class="content-providers">
+
+  <!-- Middle Content goes here -->
+  <div class="container-fluid">
+    <div class="page-header clearfix">
+      <div class="pull-left">
+        <h1 class="content-header">Jobs Monitor</h1>
+      </div>
+      
+      <div class="pull-right">
+        <div class="cp-info center-vertical">
+          <a ng-click="JobsCtrl.Export()">
+              <span class="icon-export">
+              </span>
+              <label>Export</label>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 status-container">
+        <span class="pull-left text-center status-content failed">
+          <h1 class="status-count">{{JobsCtrl.jobs.failed}}</h1>
+          <div class="status-info">
+            <span class="status-label"></span>
+            <span class="status-text">Failed</span>
+          </div>
+        </span>
+
+        <span class="vertical-line pull-left">
+          <span class="center-vertical"></span>
+        </span>
+
+        <span class="pull-left text-center status-content running">
+          <h1 class="status-count">{{JobsCtrl.jobs.running}}</h1>
+          <div class="status-info">
+            <span class="status-label"></span>
+            <span class="status-text">Running</span>
+          </div>
+        </span>
+      </div>
+
+      <div class=" col-xs-4 col-sm-4 search-container">
+        <form class="text-center clearfix" role="search">
+          <div class="input-group">
+            <input class="form-control" placeholder="Search Job" type="text" ng-model="searchText" >
+            <span class="input-group-addon" ng-click="search()">
+              <a href="" class="icon-search" ></a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- <div class="row panel">
+      <div class="col-xs-4 col-sm-4 col-md-4 label-contents">
+        <span class="label-outer pull-left text-center">
+          <div class="label label-default danger">{{JobsCtrl.jobs.failed}}</div>
+          <span class="label-text">failed</span>
+        </span>
+        <span class="vertical-line pull-left">
+          <span></span>
+        </span>
+        <span class="label-outer pull-left text-center">
+          <span class="label label-default dark">{{JobsCtrl.jobs.running}}</span>
+          <span class="label-text">running</span>
+        </span>
+      </div>
+
+      <div class="pull-right col-xs-5 col-sm-6 col-md-6">
+        <form class="text-center clearfix" role="search">
+          <div class="input-group">
+            <input class="form-control" placeholder="Search" type="text" ng-model="JobsCtrl.searchText">
+            <span class="input-group-addon"><span class="icon-search" ng-click="JobsCtrl.search()"></span></span>
+          </div>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select> -->
+
+    <!-- <div class="btn-group">
+       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+         <span data-bind="label">25</span>
+         &nbsp;
+         <span class="caret"></span>
+       </button>
+       <ul class="dropdown-menu" role="menu">
+         <li><a href="#">50</a></li>
+         <li><a href="#">75</a></li>
+         <li><a href="#">100</a></li>
+       </ul>
+     </div> -->
+
+    <div class="row pagination-content">
+      <!-- <div class="col-xs-6">
+          <span class="job-page-status">Showing {{JobsCtrl.jobs.items.length}}-{{JobsCtrl.jobs.items.length}} of {{JobsCtrl.jobs.count}} total jobs</span>
+      </div> -->
+      <div class="pagination-container">
+        <div class="pull-right pagination-dropdown">
+          <div class="btn-group">
+            <button class="btn btn-default btn-cms disabled">View</button>
+            <button type="button" class="btn btn-default btn-cms dropdown-toggle" data-toggle="dropdown">
+              <span class="btn-label-cms" data-bind="label">25</span>
+              &nbsp;
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a ng-click="JobsCtrl.changePageSize(25)">25</a></li>
+              <li><a ng-click="JobsCtrl.changePageSize(50)">50</a></li>
+              <li><a ng-click="JobsCtrl.changePageSize(75)">75</a></li>
+              <li><a ng-click="JobsCtrl.changePageSize(100)">100</a></li>
+            </ul>
+          </div>
+        </div>
+         <!-- <div class="pull-right pagination-dropdown" style="height: 6%;">
+            View
+            <select ng-model="JobsCtrl.pageSize" ng-change="onPageSizeChanged()">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select>
+        </div> -->
+      </div>
+    </div>
+
+    <div>
+      <div ag-grid="JobsCtrl.gridOptions" class="ag-fresh" style="height: 100%"></div> 
+    </div>
+  </div>
+
+</div>
+
+<div id="overlay" ng-show="JobsCtrl.loading">
+  <span class="loading-indicator loading">
+    <div class="fa fa-spinner fa-pulse"></div>
+  </span>
+</div>
+
+
+<!--- script for the button dropdown -->
+
+<script>
+$( document.body ).on( 'click', '.dropdown-menu li', function( event ) {
+    var $target = $( event.currentTarget );
+
+    $target.closest( '.btn-group' )
+       .find( '[data-bind="label"]' ).text( $target.text() )
+          .end()
+       .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+
+    return false;
+ });
+</script>
+

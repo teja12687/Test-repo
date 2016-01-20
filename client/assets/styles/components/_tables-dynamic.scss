@@ -1,0 +1,172 @@
+.page {
+  &.page-table-dynamic {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  &.page-table {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.ag-vdms .ag-root {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.ag-vdms .ag-row {
+  height: 40px !important;
+  position: relative !important;
+  top: 0 !important;
+}
+.ag-vdms .ag-cell {
+  border-right: 1px solid $vz-light-gray;
+  color: $vz-dark-gray;
+  padding: 8px;
+  margin-bottom: -5px;
+}
+
+.ag-vdms .ag-header {
+  position: relative !important;
+  height: 45px !important;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-style: solid;
+  border-color: $silver-chalice;
+}
+
+.ag-vdms .ag-pinned-header  {
+  background: -webkit-linear-gradient(white, lightgrey); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, lightgrey); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, lightgrey); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, lightgrey); /* Standard syntax */
+  border-bottom: 1px solid grey;
+}
+
+.ag-vdms .ag-header-container {
+  //background: -webkit-linear-gradient(white, lightgrey); /* For Safari 5.1 to 6.0 */
+  //background: -o-linear-gradient(white, lightgrey); /* For Opera 11.1 to 12.0 */
+  //background: -moz-linear-gradient(white, lightgrey); /* For Firefox 3.6 to 15 */
+  //background: linear-gradient(white, lightgrey); /* Standard syntax */
+  border-bottom: 1px solid $vz-light-gray;
+  background-color: $white;
+}
+
+.ag-vdms .ag-header-cell {
+  border-right: 1px solid $vz-light-gray;
+  text-align: left;
+  color: $vz-dark-gray;
+  font-weight: bold;
+  padding: 8px 4px;
+}
+
+.ag-vdms .ag-header-group-cell {
+  border-right: 1px solid grey;
+}
+
+.ag-vdms .ag-header-group-cell-with-group {
+  border-bottom: 1px solid grey;
+}
+
+.ag-vdms .ag-header-cell-label {
+  padding: 4px;
+}
+
+.ag-vdms .ag-header-group-cell-label {
+  padding: 4px;
+  font-weight: bold;
+}
+
+.ag-vdms .ag-header-cell-menu-button {
+  padding: 2px;
+  margin-top: 4px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-sizing: content-box; /* When using bootstrap, box-sizing was set to 'border-box' */
+}
+
+.ag-vdms .ag-header-cell-menu-button:hover {
+  border: 1px solid black;
+}
+
+.ag-vdms .ag-row-odd {
+ background-color: white;
+}
+
+.ag-vdms .ag-row-even {
+   background-color: #EEF1F9;
+}
+
+.ag-vdms .ag-body {
+  background-color: #ffffff;
+  padding-top: 0px !important;
+  border-top-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-style: solid;
+  border-color: $silver-chalice;
+}
+
+.ag-vdms .ag-body-viewport {
+  background-color: $white;
+}
+.ag-vdms .ag-body-container {
+  height: auto !important;
+}
+
+.ag-vdms .ag-pinned-cols-viewport {
+  background-color: #ddd
+}
+
+.ag-vdms .ag-row-selected {
+  background-color: #B2DFEE;
+}
+
+.ag-vdms .ag-group-cell-entire-row {
+  padding: 10px;
+  cursor: pointer;
+  background-color: $vz-light-gray;
+}
+
+.ag-vdms .ag-group-cell {
+}
+
+.ag-vdms .ag-filter-checkbox {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.ag-vdms .ag-filter-header-container {
+  border-bottom: 1px solid lightgrey;
+}
+
+.ag-vdms .ag-filter {
+  border: 1px solid black;
+  background-color: #f0f0f0;
+}
+
+.ag-vdms .ag-selection-checkbox {
+  margin-left: 4px;
+}
+
+
+
+/* for 6 columns with percentages not px 
+.ag-header-viewport {
+    width: 100%;
+}
+.ag-vdms .ag-header-cell {
+  width: 16.69% !important;
+}
+.ag-scrolls .ag-body-container {
+  width: 100% !important;
+}
+.ag-vdms .ag-cell {
+  width: 16.69% !important;
+}
+.ag-scrolls .ag-row {
+  width: 100% !important;
+}*/

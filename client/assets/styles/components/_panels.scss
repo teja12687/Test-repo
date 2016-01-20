@@ -1,0 +1,94 @@
+// overrides Bootstrap
+
+$panel-head: $vz-light-gray;
+$panel-head-text: $vz-dark-gray;
+$panel-body: $white;
+$panel-body-text: $vz-dark-gray;
+$panel-head-border-bottom: $silver-chalice;
+$panel-border: $silver-chalice;
+
+
+.panel {
+  border-color: $panel-border;
+  box-shadow: none;
+  @include border-top-radius(0px);
+  @include border-bottom-radius(0px);
+  .panel-heading {
+    padding: 14px 15px 15px;
+    text-transform: uppercase;
+    border-bottom-color: $panel-border;
+    @include border-top-radius(0px);
+    background-image: none;
+  }
+  .panel-title {
+    font-size: $font-size-base;
+  }
+}
+
+.page {
+.panel-default {
+  @include panel-variant($panel-border, $text-color, $panel-head, $panel-head-border-bottom);
+  > .panel-heading {
+    background-color: $panel-head;
+    color: $panel-head-text;
+    background-image: none;
+  }
+}
+}
+
+.panel.panel-card {
+  //margin-top: 10px;
+  margin-bottom: 14px;
+  font-size: $font-size-13;
+  // Variables are being set in _panels.scss
+  @include panel-variant($panel-border, $vz-dark-gray, $panel-head, $panel-head);
+
+  >.panel-heading {
+    background-color: $panel-head;
+    background-image: none;
+    padding: 3px 15px 0px 15px;
+    font-size: $font-size-18;
+    text-transform: capitalize;
+  }
+  >.panel-body {
+    padding: 10px 20px 5px 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+  }
+  >.panel-footer {
+    border-top: none;
+    background-color: $panel-body;
+    padding: 5px 20px 5px 20px;
+    color: $vz-dusty-gray;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+  }
+  table {
+    thead {
+      th {
+        width: 50%;
+        border-bottom: none;
+      }
+    }
+    tbody {
+      font-size: $font-size-12;
+      tr {
+        &:nth-child(odd) {
+          background-color: $vz-white-lilac;
+        }
+      }
+      td {
+        border-top: none;
+        word-wrap: break-word;
+        border-left: 1px solid $vz-light-gray;
+        &:first-child {
+          border-left: none;
+        }
+        &:last-child {
+          //border-left: 1px solid $vz-light-gray;
+        }
+      }
+    }
+  }
+}
+
